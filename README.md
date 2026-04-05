@@ -35,10 +35,10 @@ https://app.roboflow.com/test-hfa5m/cats-2gvph/9
 Использовалась модель YOLOv8n-seg
 
 Подобранные гиперпараметры:
-  epochs = 120
-  batch = 16
-  dropout = 0.3
-  freeze = [0..10]
+  - epochs = 120
+  - batch = 16
+  - dropout = 0.3
+  - freeze = [0..10]
 
 Аугментации:
   - hsv_h=0.015
