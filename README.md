@@ -28,11 +28,27 @@ https://app.roboflow.com/test-hfa5m/cats-2gvph/9
 ## 2. Обучение
 
 Файлы:
-- core/train.py - запуск обучения модели
-- core/valid.py - вывод метрики mAP50-95
-- core/predict.py - вызов predict 
+  - core/train.py - запуск обучения модели
+  - core/valid.py - вывод метрики mAP50-95
+  - core/predict.py - вызов predict 
 
 Использовалась модель YOLOv8n-seg
+
+Подобранные гиперпараметры:
+  epochs = 120
+  batch = 16
+  dropout = 0.3
+  freeze = [0..10]
+
+Аугментации:
+  - hsv_h=0.015
+  - hsv_s=0.7
+  - hsv_v=0.4
+  - degrees=30
+  - translate=0.2
+  - scale=0.5
+  - shear=10
+  - fliplr=0.5
 
 Веса итоговой обученной модели лежат в models/final/best.pt
 
