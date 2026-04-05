@@ -1,7 +1,7 @@
 from pathlib import Path
 from ultralytics import YOLO
 
-from scripts.utils.utils import print_sep, choose_device
+from utils.utils import print_sep, choose_device
 
 
 def train(model_path, data_yaml, device="cpu"):
@@ -52,8 +52,8 @@ def train(model_path, data_yaml, device="cpu"):
 if __name__ == "__main__":
     print_sep()
 
-    model_path = '../../models/pretrained/yolov8n-seg.pt'
-    data_path = '../../data/cats_yolo/dataset.yaml'
+    model_path = '../models/pretrained/yolov8n-seg.pt'
+    data_path = '../data/cats_yolo/dataset.yaml'
     device = choose_device()
 
     train(model_path, data_path, device)

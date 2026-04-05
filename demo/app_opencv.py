@@ -1,7 +1,7 @@
 import cv2
 
-from scripts.core.predict import predict
-from scripts.utils.mask import apply_mask_and_contour
+from core.predict import predict
+from utils.mask import apply_mask_and_contour
 
 
 def predict_and_show(model_path, image_path, conf=0.25):

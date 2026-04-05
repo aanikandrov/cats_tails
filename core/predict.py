@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-from scripts.utils.utils import print_sep
+from utils.utils import print_sep
 
 def predict(model_path, image_path, conf=0.25):
     model = YOLO(model_path)
@@ -9,8 +9,8 @@ def predict(model_path, image_path, conf=0.25):
 
 
 def main():
-    model_path = r'../../models/final/best.pt'
-    image_path = r'../../data/cats_another/1.jpg'
+    model_path = r'../models/final/best.pt'
+    image_path = r'../data/cats_another/1.jpg'
 
     print_sep()
 

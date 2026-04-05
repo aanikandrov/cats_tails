@@ -2,7 +2,7 @@ from pathlib import Path
 
 from ultralytics import YOLO
 
-from scripts.utils.utils import choose_device, print_sep
+from utils.utils import choose_device, print_sep
 
 
 def valid(model_path, data_yaml, device="cpu"):
@@ -28,8 +28,8 @@ if __name__ == "__main__":
     device = choose_device()
     print_sep()
 
-    model_path = '../../models/final/best.pt'
-    data_path = '../../data/cats_yolo/dataset.yaml'
+    model_path = '../models/final/best.pt'
+    data_path = '../data/cats_yolo/dataset.yaml'
 
     result = valid(model_path, data_path, device)
 

@@ -102,7 +102,7 @@ def coco_to_yolo(dataset_root_path, output_root_path):
 
 
 if __name__ == "__main__":
-    dataset_root_path = r"../../data/cats.v9i.coco-segmentation"
-    output_path = r"../../data/cats_yolo"
+    dataset_root_path = r"../data/cats.v9i.coco-segmentation"
+    output_path = r"../data/cats_yolo"
 
     coco_to_yolo(dataset_root_path, output_path)
