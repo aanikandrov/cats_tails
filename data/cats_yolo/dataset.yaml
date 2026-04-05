@@ -1,0 +1,8 @@
+path: D:\PythonProjects\intehros_testtask\scripts\..\datasets\cats_yolo
+train: train/images
+val: valid/images
+test: test/images
+nc: 2
+names:
+- cats
+- tail
