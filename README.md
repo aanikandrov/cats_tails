@@ -8,31 +8,32 @@
 ## 1. Подготовка данных
 
 Фотографии брал отсюда: 
-1) www.istockphoto.com 
-2) https://ru.pinterest.com
+  1) www.istockphoto.com 
+  2) https://ru.pinterest.com
 
 Размеченный датасет (Roboflow):
 https://app.roboflow.com/test-hfa5m/cats-2gvph/9
 
 Папка data:
-- cats.v9i.coco-segmentation - размеченный датасет
-- cats_yolo - датасет с нормализованными координатами
-- cats_yolo_augmented - датасет с аугментациями (albumentations) (но при обучении итоговой модели не использовался, тк аугментация через параметры train показала себя лучше)
-- cats_another - несколько изображений котов которые не использовались при обучении
+  - cats.v9i.coco-segmentation - размеченный датасет
+  - cats_yolo - датасет с нормализованными координатами
+  - cats_yolo_augmented - датасет с аугментациями (albumentations) (но при обучении итоговой модели не использовался, тк аугментация через параметры train показала себя лучше)
+  - cats_another - несколько изображений котов которые не использовались при обучении
 
 Файлы для подготовки данных:
-- utils/yolo_script.py - скрипт перевода COCO датасета в YOLO txt формат 
-- utils/augment.py - создание версии датасета с аугментациями (albumentations)
+  - utils/yolo_script.py - скрипт перевода COCO датасета в YOLO txt формат 
+  - utils/augment.py - создание версии датасета с аугментациями (albumentations)
 
 
 ## 2. Обучение
 
+Использовалась модель YOLOv8n-seg. 
+Веса итоговой обученной модели лежат в models/final/best.pt. 
+
 Файлы:
   - core/train.py - запуск обучения модели
   - core/valid.py - вывод метрики mAP50-95
-  - core/predict.py - вызов predict 
-
-Использовалась модель YOLOv8n-seg
+  - core/predict.py - вызов predict
 
 Подобранные гиперпараметры:
   - epochs = 120
@@ -50,14 +51,11 @@ https://app.roboflow.com/test-hfa5m/cats-2gvph/9
   - shear=10
   - fliplr=0.5
 
-Веса итоговой обученной модели лежат в models/final/best.pt
-
 **Метрики итоговой модели**
-
-P = 0.95
-R = 0.66
-mAP50 = 0.82
-mAP50-95 = 0.58
+  - P = 0.95
+  - R = 0.66
+  - mAP50 = 0.82
+  - mAP50-95 = 0.58
 
 
 ## 3. Демонстрация
